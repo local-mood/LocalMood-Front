@@ -20,7 +20,7 @@ export default async function Home() {
       id: 0,
       placeName: "나이스워크투데이",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_1280.jpg",
       ],
       category: "카페",
       location: "마포구 망원동",
@@ -31,15 +31,130 @@ export default async function Home() {
     },
     {
       id: 1,
-      placeName: "나이스워크투데이",
+      placeName: "셀렉티드 커피앤스윗츠",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2018/05/01/18/21/eclair-3366430_1280.jpg",
       ],
       category: "카페",
-      location: "마포구 망원동",
+      location: "마포구 염리동",
       scrapped: true,
       tags: {
-        interior: ["통창뷰", "넓은 공간"],
+        interior: ["아담한 공간", "무채색"],
+      },
+    },
+  ];
+  const PLACE_DUMMY2 = [
+    {
+      id: 0,
+      placeName: "컵스커피",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2014/03/07/11/00/bananas-282313_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 염리동",
+      scrapped: false,
+      tags: {
+        interior: ["포토스팟", "엔틱한"],
+      },
+    },
+    {
+      id: 1,
+      placeName: "아크",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2017/08/07/22/57/coffee-2608864_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 신수동",
+      scrapped: true,
+      tags: {
+        interior: ["넓은 공간", "우드톤"],
+      },
+    },
+  ];
+
+  const PLACE_DUMMY3 = [
+    {
+      id: 0,
+      placeName: "OSDS 연남",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2021/02/02/02/34/cafe-5972490_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 연남동",
+      scrapped: false,
+      tags: {
+        interior: ["포토스팟", "엔틱한"],
+      },
+    },
+    {
+      id: 1,
+      placeName: "어글리 베이커리",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2019/09/12/18/29/street-cafe-4472312_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 신수동",
+      scrapped: true,
+      tags: {
+        interior: ["넓은 공간", "우드톤"],
+      },
+    },
+  ];
+
+  const PLACE_DUMMY4 = [
+    {
+      id: 0,
+      placeName: "조앤도슨",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2019/12/15/18/08/cats-cafe-4697753_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 서강동",
+      scrapped: false,
+      tags: {
+        interior: ["따뜻한 조명", "엔틱한"],
+      },
+    },
+    {
+      id: 1,
+      placeName: "오퍼카페",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2022/10/14/07/12/muslim-7520627_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 연남동",
+      scrapped: true,
+      tags: {
+        interior: ["넓은 공간", "우드톤"],
+      },
+    },
+  ];
+
+  const PLACE_DUMMY5 = [
+    {
+      id: 0,
+      placeName: "일쩜오플로어",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2018/04/05/17/31/coffee-3293499_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 염리동",
+      scrapped: false,
+      tags: {
+        interior: ["테라스 및 야외좌석", "모던한"],
+      },
+    },
+    {
+      id: 1,
+      placeName: "팽페르뒤",
+      placeImg: [
+        "https://cdn.pixabay.com/photo/2017/01/15/18/54/bahamas-1982413_1280.jpg",
+      ],
+      category: "카페",
+      location: "마포구 성산제1동",
+      scrapped: true,
+      tags: {
+        interior: ["넓은 공간", "우드톤"],
       },
     },
   ];
@@ -56,7 +171,7 @@ export default async function Home() {
         <PlaceHomeSlider
           mainText={PLACE_PURPOSE[1]}
           subText="을 위한 공간"
-          placeList={PLACE_DUMMY}
+          placeList={PLACE_DUMMY2}
         />
         <CurationHomePopular
           mainText="마포구 인기 큐레이션"
@@ -66,12 +181,12 @@ export default async function Home() {
         <PlaceHomeSlider
           mainText={PLACE_PURPOSE[2]}
           subText="공간"
-          placeList={PLACE_DUMMY}
+          placeList={PLACE_DUMMY3}
         />
         <PlaceHomeSlider
           mainText={PLACE_PURPOSE[3]}
           subText="공간"
-          placeList={PLACE_DUMMY}
+          placeList={PLACE_DUMMY4}
         />
       </div>
       <Footer />

@@ -7,19 +7,19 @@ export default async function Record() {
   const RECORD_DUMMY = [
     {
       id: 0,
-      placeName: "치즈케이크",
+      placeName: "피오니",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2015/04/13/06/23/cake-720073_1280.jpg",
       ],
       category: "카페",
-      location: "마포구 망원동",
+      location: "마포구 연남동",
       scrapped: false,
     },
     {
       id: 1,
-      placeName: "파스타치킨피자",
+      placeName: "리차드하우스연남",
       placeImg: [
-        "https://cdn.pixabay.com/photo/2023/10/24/08/24/sailboats-8337698_1280.jpg",
+        "https://cdn.pixabay.com/photo/2021/02/08/12/40/lasagna-5994612_1280.jpg",
       ],
       category: "양식",
       location: "마포구 망원동",
@@ -27,19 +27,19 @@ export default async function Record() {
     },
     {
       id: 2,
-      placeName: "김치찌개김말이",
+      placeName: "산더미불고기",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2017/07/19/03/13/pot-2517765_1280.jpg",
       ],
       category: "한식",
-      location: "마포구 망원동",
+      location: "마포구 어울마당로",
       scrapped: false,
     },
     {
       id: 3,
       placeName: "나이스워크투데이",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2018/01/15/04/57/food-3083223_1280.jpg",
       ],
       category: "카페",
       location: "마포구 망원동",
@@ -47,22 +47,22 @@ export default async function Record() {
     },
     {
       id: 4,
-      placeName: "나이스워크투데이",
+      placeName: "일쩜오플로어",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2018/04/05/17/31/coffee-3293499_1280.jpg",
       ],
       category: "카페",
-      location: "마포구 망원동",
+      location: "마포구 염리동",
       scrapped: false,
     },
     {
       id: 5,
-      placeName: "나이스워크투데이",
+      placeName: "팽페르뒤",
       placeImg: [
-        "https://media.istockphoto.com/id/1446199740/ko/%EC%82%AC%EC%A7%84/%ED%96%87%EB%B3%95%EC%9D%B4-%EC%9E%98-%EB%93%9C%EB%8A%94-%EC%88%B2%EC%9D%84-%ED%86%B5%EA%B3%BC%ED%95%98%EB%8A%94-%EA%B8%B8.jpg?s=2048x2048&w=is&k=20&c=3z_ODBT78uZDVqy-3B6r8LBa825AuSpL0xfzySe2fj8=",
+        "https://cdn.pixabay.com/photo/2017/01/15/18/54/bahamas-1982413_1280.jpg",
       ],
       category: "카페",
-      location: "마포구 망원동",
+      location: "마포구 성산제1동",
       scrapped: false,
     },
   ];

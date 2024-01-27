@@ -25,7 +25,7 @@ export default function CurationPage() {
       id: 0,
       variant: "my" as "my" | "others" | undefined,
       image: [
-        "https://cdn.pixabay.com/photo/2023/10/24/08/24/sailboats-8337698_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/01/15/18/54/bahamas-1982413_1280.jpg",
       ],
       author: "김현민",
       title: "크리스마스에 즐기기 좋은 마포구 데이트 코스",
@@ -37,11 +37,11 @@ export default function CurationPage() {
       id: 1,
       variant: "my" as "my" | "others" | undefined,
       image: [
-        "https://cdn.pixabay.com/photo/2023/10/24/08/24/sailboats-8337698_1280.jpg",
+        "https://cdn.pixabay.com/photo/2020/02/17/19/06/restaurant-4857484_1280.jpg",
       ],
       author: "김현민",
-      title: "카페",
-      keyword: ["연인과의 데이트", "크리스마스"],
+      title: "연초 모임에 딱 좋은 공간",
+      keyword: ["연초모임", "연말모임"],
       scrapped: true,
       spaceCount: 10,
     },
@@ -49,11 +49,11 @@ export default function CurationPage() {
       id: 2,
       variant: "my" as "my" | "others" | undefined,
       image: [
-        "https://cdn.pixabay.com/photo/2023/10/24/08/24/sailboats-8337698_1280.jpg",
+        "https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg",
       ],
       author: "김현민",
       title: "화이트데이에 즐기기 좋은 마포구 데이트 코스",
-      keyword: ["연인과의 데이트", "크리스마스"],
+      keyword: ["연인과의 데이트", "화이트데이"],
       scrapped: true,
       spaceCount: 12,
     },
@@ -61,11 +61,62 @@ export default function CurationPage() {
       id: 3,
       variant: "my" as "my" | "others" | undefined,
       image: [
-        "https://cdn.pixabay.com/photo/2023/10/24/08/24/sailboats-8337698_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_1280.jpg",
       ],
       author: "김현민",
-      title: "크리스마스에 즐기기 좋은 마포구 데이트 코스",
+      title: "친구들과 즐길 수 있는 공간",
+      keyword: ["친구들", "모임"],
+      scrapped: true,
+      spaceCount: 1,
+    },
+  ];
+
+  const SCRAPPED_DUMMY = [
+    {
+      id: 0,
+      variant: "my" as "my" | "others" | undefined,
+      image: [
+        "https://cdn.pixabay.com/photo/2014/03/07/11/00/bananas-282313_1280.jpg",
+      ],
+      author: "김현민",
+      title: "다가오는 발렌타인데이에 맞는 공간들",
       keyword: ["연인과의 데이트", "크리스마스"],
+      scrapped: true,
+      spaceCount: 9,
+    },
+    {
+      id: 1,
+      variant: "my" as "my" | "others" | undefined,
+      image: [
+        "https://cdn.pixabay.com/photo/2017/08/07/22/57/coffee-2608864_1280.jpg",
+      ],
+      author: "김현민",
+      title: "크리스마스",
+      keyword: ["연초모임", "연말모임"],
+      scrapped: true,
+      spaceCount: 10,
+    },
+    {
+      id: 2,
+      variant: "my" as "my" | "others" | undefined,
+      image: [
+        "https://cdn.pixabay.com/photo/2018/05/01/18/21/eclair-3366430_1280.jpg",
+      ],
+      author: "김현민",
+      title: "흔하지 않은 마포구 데이트 코스",
+      keyword: ["연인과의 데이트", "화이트데이"],
+      scrapped: true,
+      spaceCount: 12,
+    },
+    {
+      id: 3,
+      variant: "my" as "my" | "others" | undefined,
+      image: [
+        "https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_1280.jpg",
+      ],
+      author: "김현민",
+      title: "친구들과 즐길 수 있는 공간",
+      keyword: ["친구들", "모임"],
       scrapped: true,
       spaceCount: 1,
     },
@@ -112,7 +163,7 @@ export default function CurationPage() {
           ))}
         <div className="pt-[2rem] pb-[6rem]">
           {tabIndex === 1 &&
-            MY_CURATION_DUMMY.map((props) => (
+            SCRAPPED_DUMMY.map((props) => (
               <div key={props.author + props.id} className="mb-[1.6rem]">
                 <CurationScrapped {...props} />
               </div>
