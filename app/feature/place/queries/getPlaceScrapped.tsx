@@ -1,5 +1,3 @@
-import { NextRequest } from "next/server";
-
 export default async function GetPlaceScrapped() {
   const token = "token from localStorage";
   const res = await fetch(

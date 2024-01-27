@@ -8,6 +8,8 @@ import ScrapLine from "@common/assets/icons/scrap/ScrapLine";
 import ScrapFill from "@common/assets/icons/scrap/ScrapFill";
 import Link from "next/link";
 import { PlaceInfoProps } from "@feature/place/type";
+import DELETE from "@api/place/scrapped/delete/[id]/route";
+import POST from "@api/place/scrapped/add/[id]/route";
 
 export default function PlaceInfoTop({
   id,
@@ -30,12 +32,12 @@ export default function PlaceInfoTop({
   ) => {
     e.preventDefault();
     setIsScrapped((prev) => !prev);
+    const id = 1; // 나중에 api 연결 더 하고나면 삭제
     if (isScrapped) {
-      const res = await fetch(`/api/places/scrapped/delete/${String(id)}`);
+      await DELETE({ params: { id } });
     } else {
-      const res = await fetch(`/api/places/scrapped/add/${String(id)}`);
+      await POST({ params: { id } });
     }
-    //장소 id 활용하여 api 문서에 맞게 해당 장소 scrap 상태 변경 api 호출(client side - tanstack query)
   };
   return (
     <Link

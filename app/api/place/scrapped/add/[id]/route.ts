@@ -1,7 +1,7 @@
-export default async function POST({ params }: { params: { id: string } }) {
+export default async function POST({ params }: { params: { id: number } }) {
   const token = "token from localStorage";
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_API}/v1/scraps/spaces/${params.id}`,
+    `${process.env.NEXT_PUBLIC_SERVER_API}/api/v1/scraps/spaces/${params.id}`,
     {
       method: "POST",
       headers: {
