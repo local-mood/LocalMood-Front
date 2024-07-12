@@ -8,11 +8,10 @@ import { Metadata } from "next";
 import { PLACE_SUB_TYPE } from "@/feature/place/constants/place-tag-category";
 import { Suspense } from "react";
 import PlaceDetailTopBar from "@/feature/place/components/PlaceDetail/organisms/PlaceDetailTopBar";
-import UseDeferredComponent from "@/common/hooks/useDeferredComponent";
-import LoadingUI from "@/common/components/ui/loading/LoadingUI";
 import RelatedSliderLists from "@/feature/place/components/PlaceDetail/organisms/RelatedSliderLists";
 import PlaceDetailSkeleton from "@/feature/place/components/PlaceDetail/skeleton/PlaceDetailSkeleton";
 import PlaceRelatedSkeleton from "@/feature/place/components/PlaceDetail/skeleton/PlaceRelatedSkeleton";
+import UseDeferredComponent from "@/common/hooks/useDeferredComponent";
 
 type Props = {
   params: { id: number };
@@ -58,7 +57,13 @@ export default async function PlaceDetailPage({
   return (
     <div className="w-[100%] h-[100%] relative pb-[60px] overflow-auto">
       {/* Template */}
-      <Suspense fallback={<PlaceDetailSkeleton />}>
+      <Suspense
+        fallback={
+          <UseDeferredComponent>
+            <PlaceDetailSkeleton />
+          </UseDeferredComponent>
+        }
+      >
         <PlaceDetailTopBar
           type={detailData.info.type}
           address={detailData.info.address}
@@ -99,7 +104,13 @@ export default async function PlaceDetailPage({
         />
       </Suspense>
       <Divider className="bg-line-gray-3 h-[0.4rem] mb-[4.8rem]" />
-      <Suspense fallback={<PlaceRelatedSkeleton />}>
+      <Suspense
+        fallback={
+          <UseDeferredComponent>
+            <PlaceRelatedSkeleton />
+          </UseDeferredComponent>
+        }
+      >
         <RelatedSliderLists id={params.id} name={detailData.info.name} />
       </Suspense>
     </div>
