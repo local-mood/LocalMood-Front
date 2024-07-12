@@ -12,6 +12,7 @@ import UseDeferredComponent from "@/common/hooks/useDeferredComponent";
 import LoadingUI from "@/common/components/ui/loading/LoadingUI";
 import RelatedSliderLists from "@/feature/place/components/PlaceDetail/organisms/RelatedSliderLists";
 import PlaceDetailSkeleton from "@/feature/place/components/PlaceDetail/skeleton/PlaceDetailSkeleton";
+import PlaceRelatedSkeleton from "@/feature/place/components/PlaceDetail/skeleton/PlaceRelatedSkeleton";
 
 type Props = {
   params: { id: number };
@@ -98,13 +99,7 @@ export default async function PlaceDetailPage({
         />
       </Suspense>
       <Divider className="bg-line-gray-3 h-[0.4rem] mb-[4.8rem]" />
-      <Suspense
-        fallback={
-          <UseDeferredComponent>
-            <LoadingUI className="h-0" />
-          </UseDeferredComponent>
-        }
-      >
+      <Suspense fallback={<PlaceRelatedSkeleton />}>
         <RelatedSliderLists id={params.id} name={detailData.info.name} />
       </Suspense>
     </div>
