@@ -11,6 +11,7 @@ import PlaceDetailTopBar from "@/feature/place/components/PlaceDetail/organisms/
 import UseDeferredComponent from "@/common/hooks/useDeferredComponent";
 import LoadingUI from "@/common/components/ui/loading/LoadingUI";
 import RelatedSliderLists from "@/feature/place/components/PlaceDetail/organisms/RelatedSliderLists";
+import PlaceDetailSkeleton from "@/feature/place/components/PlaceDetail/skeleton/PlaceDetailSkeleton";
 
 type Props = {
   params: { id: number };
@@ -56,7 +57,7 @@ export default async function PlaceDetailPage({
   return (
     <div className="w-[100%] h-[100%] relative pb-[60px] overflow-auto">
       {/* Template */}
-      <Suspense fallback={null}>
+      <Suspense fallback={<PlaceDetailSkeleton />}>
         <PlaceDetailTopBar
           type={detailData.info.type}
           address={detailData.info.address}
@@ -76,7 +77,7 @@ export default async function PlaceDetailPage({
           optionalService={detailData.info.optionalService}
           dishDesc={detailData.info.dishDesc}
         />
-        <Divider className="h-[0.4rem] mb-[3.6rem] bg-line-gray-3" />
+        <Divider className="h-[0.4rem] mb-[36px] bg-line-gray-3" />
         <PlaceKeywordSummary
           mainText="유저들이 기록한 키워드 요약"
           description="이 공간을 가장 잘 설명하는 키워드에요"
